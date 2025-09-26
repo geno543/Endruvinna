@@ -64,7 +64,7 @@ const WasteManagement = () => {
   const [isSimulating, setIsSimulating] = useState(false);
   const [simulationProgress, setSimulationProgress] = useState(0);
   const [errors, setErrors] = useState<{[key: string]: string}>({});
-  const [marsEnvironment, setMarsEnvironment] = useState<MarsEnvironment>({
+  const [marsEnvironment] = useState<MarsEnvironment>({
     temperature: -63, // Average Mars temperature
     pressure: 0.636, // Average Mars pressure
     radiation: 0.67, // Daily radiation exposure
@@ -212,7 +212,7 @@ const WasteManagement = () => {
   };
 
   // Advanced waste composition analysis
-  const analyzeWasteComposition = (type: string, description: string): WasteItem['composition'] => {
+  const analyzeWasteComposition = (type: string): WasteItem['composition'] => {
     const compositions: { [key: string]: WasteItem['composition'] } = {
       'Organic Waste': { organic: 85, inorganic: 10, moisture: 60, contaminants: 5 },
       'Plastic Materials': { organic: 95, inorganic: 3, moisture: 2, contaminants: 8 },
@@ -267,7 +267,7 @@ const WasteManagement = () => {
       const method = processingMethods[item.type] || processingMethods['Organic Waste'];
       
       // Analyze waste composition
-      const composition = analyzeWasteComposition(item.type, item.description);
+      const composition = analyzeWasteComposition(item.type);
       
       // Calculate environmental impact
       const envImpact = calculateEnvironmentalImpact(method, marsEnvironment);
@@ -275,8 +275,8 @@ const WasteManagement = () => {
       // Calculate overall processing efficiency
       const baseEfficiency = method.efficiency;
       const environmentalEfficiency = (envImpact.temperature + envImpact.pressure + envImpact.radiation) / 3;
-      const compositionEfficiency = (composition.organic! + composition.inorganic!) / 100;
-      const contaminationPenalty = Math.max(0, 1 - (composition.contaminants! / 100));
+      const compositionEfficiency = ((composition?.organic || 0) + (composition?.inorganic || 0)) / 100;
+      const contaminationPenalty = Math.max(0, 1 - ((composition?.contaminants || 0) / 100));
       
       const processingEfficiency = baseEfficiency * environmentalEfficiency * compositionEfficiency * contaminationPenalty;
       
@@ -879,22 +879,22 @@ const WasteManagement = () => {
                           <span className="text-mars-white/70 text-xs">Water:</span>
                           <span className="text-mars-white font-medium text-xs">{item.resourceSavings.water} L</span>
                         </div>
-                        {item.resourceSavings.oxygen > 0 && (
+                        {(item.resourceSavings.oxygen || 0) > 0 && (
                           <div className="flex items-center justify-between">
                             <span className="text-mars-white/70 text-xs">Oxygen:</span>
-                            <span className="text-mars-white font-medium text-xs">{item.resourceSavings.oxygen} L</span>
+                            <span className="text-mars-white font-medium text-xs">{item.resourceSavings.oxygen || 0} L</span>
                           </div>
                         )}
-                        {item.resourceSavings.biomass > 0 && (
+                        {(item.resourceSavings.biomass || 0) > 0 && (
                           <div className="flex items-center justify-between">
                             <span className="text-mars-white/70 text-xs">Biomass:</span>
-                            <span className="text-mars-white font-medium text-xs">{item.resourceSavings.biomass} kg</span>
+                            <span className="text-mars-white font-medium text-xs">{item.resourceSavings.biomass || 0} kg</span>
                           </div>
                         )}
-                        {item.resourceSavings.metals > 0 && (
+                        {(item.resourceSavings.metals || 0) > 0 && (
                           <div className="flex items-center justify-between">
                             <span className="text-mars-white/70 text-xs">Metals:</span>
-                            <span className="text-mars-white font-medium text-xs">{item.resourceSavings.metals} kg</span>
+                            <span className="text-mars-white font-medium text-xs">{item.resourceSavings.metals || 0} kg</span>
                           </div>
                         )}
                       </div>
