@@ -78,7 +78,7 @@ const Footer = ({ children }: FooterProps) => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-mars-white group-hover:text-mars-red transition-colors duration-200">Endruvinna</h3>
+                <h3 className="text-2xl font-bold text-mars-white group-hover:text-mars-red transition-colors duration-200">Endruvinna System</h3>
                 <p className="text-mars-orange text-sm font-medium">Mission Control</p>
               </div>
             </Link>
@@ -191,9 +191,9 @@ const Footer = ({ children }: FooterProps) => {
         <div className="mt-12 pt-8 border-t border-mars-brown/30">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
-              <p className="text-mars-white/60 text-sm">
-            © {currentYear} Endruvinna Mission. All rights reserved.
-          </p>
+              <p className="text-center text-mars-white/60 text-sm">
+          © {currentYear} Endruvinna System Mission. All rights reserved.
+        </p>
               <div className="flex space-x-6">
                 <a href="#" className="text-mars-white/60 hover:text-mars-red text-sm transition-colors">
                   Privacy Policy

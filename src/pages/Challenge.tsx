@@ -195,7 +195,7 @@ const Challenge = () => {
               Our Solution Approach
             </h2>
             <p className="text-xl text-mars-white/70 max-w-3xl mx-auto">
-              Endruvinna addresses each challenge requirement through innovative technology and integrated system design.
+              Endruvinna System addresses each challenge requirement through innovative technology and integrated system design.
             </p>
           </div>
 

@@ -32,7 +32,7 @@ const Header = ({ children }: HeaderProps) => {
               </svg>
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-mars-white group-hover:text-mars-red transition-colors duration-200">Endruvinna</h1>
+              <h1 className="text-2xl font-bold text-mars-white group-hover:text-mars-red transition-colors duration-200">Endruvinna System</h1>
               <p className="text-sm text-mars-orange font-medium">Mission Control</p>
             </div>
           </Link>

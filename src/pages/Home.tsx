@@ -53,7 +53,7 @@ const Home = () => {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-20">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-mars-white">
-            Endruvinna
+            Endruvinna System
             <span className="block text-3xl md:text-4xl font-light text-mars-white/80 mt-2">
               Mission to Mars
             </span>

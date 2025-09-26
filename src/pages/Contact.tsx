@@ -58,7 +58,7 @@ const Contact = () => {
               Contact Our Team
             </h1>
             <p className="text-xl md:text-2xl text-mars-white/90 max-w-4xl mx-auto leading-relaxed">
-              Connect with the Endruvinna mission specialists and learn how you can contribute to the future of Mars exploration.
+              Connect with the Endruvinna System mission specialists and learn how you can contribute to the future of Mars exploration.
             </p>
           </div>
         </div>
@@ -72,7 +72,7 @@ const Contact = () => {
               Mission Team
             </h2>
             <p className="text-xl text-mars-white/70 max-w-3xl mx-auto">
-              Meet the dedicated professionals leading the Endruvinna mission and developing innovative solutions for Mars exploration.
+              Meet the dedicated professionals leading the Endruvinna System mission and developing innovative solutions for Mars exploration.
             </p>
           </div>
 
@@ -271,7 +271,7 @@ const Contact = () => {
                     name="message"
                     rows={6}
                     className="w-full px-4 py-3 bg-mars-gray border border-mars-gray/50 rounded-lg focus:ring-2 focus:ring-mars-red focus:border-mars-red text-mars-white placeholder-mars-white/50 transition-colors resize-none"
-                    placeholder="Tell us about your interest in the Endruvinna mission..."
+                    placeholder="Tell us about your interest in the Endruvinna System mission..."
                   ></textarea>
                 </div>
 
@@ -299,16 +299,16 @@ const Contact = () => {
             <h2 className="text-4xl font-bold text-mars-white mb-4">
               Mission Headquarters
             </h2>
-            <p className="text-xl text-mars-white/70 max-w-3xl mx-auto">
-              Our mission control center coordinates all aspects of the Endruvinna project and serves as the hub for international collaboration.
-            </p>
+            <p className="text-lg text-mars-white/80 mb-8">
+          Our mission control center coordinates all aspects of the Endruvinna System project and serves as the hub for international collaboration.
+        </p>
           </div>
 
           <div className="bg-mars-brown rounded-2xl shadow-xl p-8 lg:p-12 border border-mars-gray/30">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-3xl font-bold text-mars-white mb-6">
-                  Endruvinna Mission Control
+                  Endruvinna System Mission Control
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
